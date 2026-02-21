@@ -32,31 +32,6 @@ En un ecosistema digital saturado, la velocidad y la precisión son nuestro vene
 
 ---
 
-## 💻 Stack Tecnológico
-Utilizamos un conjunto de herramientas de alto rendimiento para garantizar que tu proyecto sea inalcanzable:
-- **Frontend:** HTML5, CSS3 (Modern Grid & Flexbox), JS ES6+.
-- **UX/UI:** Diseño enfocado en la retención del usuario con estética Dark Mode.
-- **Deploy:** Integración continua mediante GitHub Pages.
-
----
-
-## 📞 Contacto Estratégico
-Estamos listos para transformar tu operación. Contacta directamente con nuestros líderes de proyecto:
-
-<table>
-  <tr>
-    <td align="center">
-      <img src="https://ui-avatars.com/api/?name=Juan+Pablo&background=8cf76b&color=000" width="100px;" alt="JP"/><br />
-      <sub><b>Juan Pablo Urbano</b></sub><br />
-      <a href="https://wa.me/573245640270?text=Hola%20Juan%20Pablo,%20requiero%20una%20consultoría%20de%20SnakeDev" title="WhatsApp">💬 WhatsApp</a>
-    </td>
-    <td align="center">
-      <img src="https://ui-avatars.com/api/?name=Luis+Jimenez&background=ffffff&color=000" width="100px;" alt="LJ"/><br />
-      <sub><b>Luis Fernando Jiménez</b></sub><br />
-      <a href="https://wa.me/573226849465?text=Hola%20Luis,%20requiero%20una%20consultoría%20de%20SnakeDev" title="WhatsApp">💬 WhatsApp</a>
-    </td>
-  </tr>
-</table>
 
 ---
 
