@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SnakeDev🐍 · Software Solutions</title>
-  
+
   <link rel="icon" href="https://fav.farm/🐍" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=JetBrains+Mono&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=JetBrains+Mono&display=swap"
+    rel="stylesheet" />
   <style>
     :root {
       --snake-green: #8cf76b;
@@ -18,9 +21,18 @@
       --text-gray: #888888;
     }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: 'Space Grotesk', sans-serif;
       background: var(--bg-black);
@@ -31,72 +43,199 @@
 
     /* Navegación */
     nav {
-      position: fixed; top: 0; width: 100%; z-index: 1000;
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 1.5rem 5%; background: rgba(5, 5, 5, 0.9);
-      backdrop-filter: blur(10px); border-bottom: 1px solid rgba(140, 247, 107, 0.1);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 5%;
+      background: rgba(5, 5, 5, 0.9);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(140, 247, 107, 0.1);
     }
-    .logo { font-size: 1.6rem; font-weight: 700; letter-spacing: -1px; text-decoration: none; color: white; }
-    .logo span { color: var(--snake-green); }
 
-    nav ul { display: flex; list-style: none; gap: 2rem; }
-    nav ul a { 
-      text-decoration: none; color: var(--text-gray); font-size: 0.8rem; 
-      text-transform: uppercase; letter-spacing: 2px; transition: 0.3s;
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: -1px;
+      text-decoration: none;
+      color: white;
     }
-    nav ul a:hover { color: var(--snake-green); }
+
+    .logo span {
+      color: var(--snake-green);
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    nav ul a {
+      text-decoration: none;
+      color: var(--text-gray);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transition: 0.3s;
+    }
+
+    nav ul a:hover {
+      color: var(--snake-green);
+    }
 
     /* Hero */
     #hero {
-      height: 80vh; display: flex; align-items: center; padding: 0 5%;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      padding: 0 5%;
       background: radial-gradient(circle at 70% 30%, #0d1a0d 0%, #050505 60%);
     }
-    h1 { font-size: clamp(3rem, 8vw, 5.5rem); line-height: 0.9; margin-bottom: 1.5rem; }
-    h1 em { font-style: normal; color: var(--snake-green); }
-    .hero-tag { color: var(--snake-green); font-family: 'JetBrains Mono'; margin-bottom: 1rem; display: block; }
+
+    h1 {
+      font-size: clamp(3rem, 8vw, 5.5rem);
+      line-height: 0.9;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 em {
+      font-style: normal;
+      color: var(--snake-green);
+    }
+
+    .hero-tag {
+      color: var(--snake-green);
+      font-family: 'JetBrains Mono';
+      margin-bottom: 1rem;
+      display: block;
+    }
 
     /* Servicios */
-    #servicios { padding: 80px 5%; }
+    #servicios {
+      padding: 80px 5%;
+    }
+
     .services-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem; margin-top: 3rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
     }
+
     .card {
-      background: var(--bg-card); padding: 2.5rem; border: 1px solid rgba(140, 247, 107, 0.1);
-      transition: 0.4s; position: relative;
+      background: var(--bg-card);
+      padding: 2.5rem;
+      border: 1px solid rgba(140, 247, 107, 0.1);
+      transition: 0.4s;
+      position: relative;
     }
-    .card:hover { border-color: var(--snake-green); transform: translateY(-5px); }
-    .card-icon { font-size: 2rem; margin-bottom: 1rem; display: block; }
-    .card h3 { color: var(--snake-green); margin-bottom: 1rem; text-transform: uppercase; font-size: 1.2rem; }
-    .card p { color: var(--text-gray); font-size: 0.9rem; }
+
+    .card:hover {
+      border-color: var(--snake-green);
+      transform: translateY(-5px);
+    }
+
+    .card-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .card h3 {
+      color: var(--snake-green);
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      color: var(--text-gray);
+      font-size: 0.9rem;
+    }
 
     /* Contacto */
-    #contacto { padding: 100px 5%; background: #080808; text-align: center; }
-    .contact-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem; margin-top: 4rem; max-width: 1000px; margin-inline: auto;
+    #contacto {
+      padding: 100px 5%;
+      background: #080808;
+      text-align: center;
     }
-    .contact-card {
-      background: #111; padding: 2rem; border-left: 4px solid var(--snake-green);
-      text-align: left; transition: 0.3s; text-decoration: none; color: white; display: block;
-    }
-    .contact-card:hover { background: #161616; transform: scale(1.02); }
-    .contact-card h4 { font-size: 1.4rem; margin-bottom: 0.5rem; }
-    .contact-card p { color: var(--snake-green); font-family: 'JetBrains Mono'; font-size: 1.1rem; }
-    
-    .main-email {
-      display: block; margin-top: 4rem; font-size: clamp(1.2rem, 4vw, 2.5rem);
-      color: white; text-decoration: none; font-weight: 700; transition: 0.3s;
-    }
-    .main-email:hover { color: var(--snake-green); text-shadow: 0 0 15px var(--snake-green); }
 
-    footer { padding: 3rem; text-align: center; color: #444; border-top: 1px solid #111; }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 4rem;
+      max-width: 1000px;
+      margin-inline: auto;
+    }
+
+    .contact-card {
+      background: #111;
+      padding: 2rem;
+      border-left: 4px solid var(--snake-green);
+      text-align: left;
+      transition: 0.3s;
+      text-decoration: none;
+      color: white;
+      display: block;
+    }
+
+    .contact-card:hover {
+      background: #161616;
+      transform: scale(1.02);
+    }
+
+    .contact-card h4 {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-card p {
+      color: var(--snake-green);
+      font-family: 'JetBrains Mono';
+      font-size: 1.1rem;
+    }
+
+    .main-email {
+      display: block;
+      margin-top: 4rem;
+      font-size: clamp(1.2rem, 4vw, 2.5rem);
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+
+    .main-email:hover {
+      color: var(--snake-green);
+      text-shadow: 0 0 15px var(--snake-green);
+    }
+
+    footer {
+      padding: 3rem;
+      text-align: center;
+      color: #444;
+      border-top: 1px solid #111;
+    }
 
     /* Reveal effect */
-    .reveal { opacity: 0; transform: translateY(20px); transition: 0.6s ease-out; }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: 0.6s ease-out;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 </head>
+
 <body>
 
   <nav>
@@ -111,14 +250,15 @@
     <div style="max-width: 900px;">
       <span class="hero-tag reveal">// SISTEMAS DE ALTO IMPACTO</span>
       <h1 class="reveal">Desarrollamos el <em>Futuro</em> de tu Negocio.</h1>
-      <a href="#contacto" style="color: var(--snake-green); text-decoration: none; font-weight: 700; border: 1px solid var(--snake-green); padding: 12px 24px; display: inline-block;">CONTÁCTANOS</a>
+      <a href="#contacto"
+        style="color: var(--snake-green); text-decoration: none; font-weight: 700; border: 1px solid var(--snake-green); padding: 12px 24px; display: inline-block;">CONTÁCTANOS</a>
     </div>
   </section>
 
   <section id="servicios">
     <h2 class="reveal" style="font-size: 2.5rem; text-align: center;">Nuestras <span>Soluciones</span></h2>
     <div class="services-grid">
-      
+
       <div class="card reveal">
         <span class="card-icon">🌐</span>
         <h3>Páginas Web</h3>
@@ -170,27 +310,64 @@
     </div>
   </section>
 
+  <section id="Como-Trabajamos" style="padding: 4rem 1rem;">
+  <h2 class="reveal" style="font-size: 2.5rem; text-align: center; margin-bottom: 2rem;">
+    ¿Cómo Trabajamos?
+  </h2>
+  
+  <div class="reveal" style="max-width: 700px; margin: 0 auto; color: var(--text-gray); font-size: 1.1rem;">
+    <ul style="list-style: none; padding: 0; display: inline-block; text-align: left; width: 100%; max-width: fit-content; display: block; margin: 0 auto;">
+      <li style="margin-bottom: 0.8rem; display: flex; align-items: center;">
+        <span style="margin-right: 10px;">—</span> Mostramos Avance previo antes de pagar.
+      </li>
+      <li style="margin-bottom: 0.8rem; display: flex; align-items: center;">
+        <span style="margin-right: 10px;">—</span> Trabajamos con un primer adelanto para iniciar el proyecto.
+      </li>
+      <li style="margin-bottom: 0.8rem; display: flex; align-items: center;">
+        <span style="margin-right: 10px;">—</span> El pago restante se realiza al finalizar el trabajo.
+      </li>
+      <li style="margin-bottom: 0.8rem; display: flex; align-items: center;">
+        <span style="margin-right: 10px;">—</span> Precios accesibles y flexibles.
+      </li>
+      <li style="margin-bottom: 0.8rem; display: flex; align-items: center;">
+        <span style="margin-right: 10px;">—</span> Trabajo profesional y dinámico.
+      </li>
+      <li style="margin-bottom: 0.8rem; display: flex; align-items: center;">
+        <span style="margin-right: 10px;">—</span> Seguimiento constante del proyecto.
+      </li>
+      <li style="margin-bottom: 0.8rem; display: flex; align-items: center;">
+        <span style="margin-right: 10px;">—</span> Entrega puntual garantizada.
+      </li>
+      <li style="margin-bottom: 0.8rem; display: flex; align-items: center;">
+        <span style="margin-right: 10px;">—</span> Soluciones personalizadas para cada cliente.
+      </li>
+    </ul>
+  </div>
+</section>
+
   <section id="contacto">
     <h2 class="reveal" style="font-size: 2.5rem;">Contacto Directo</h2>
     <div class="contact-grid">
-      <a href="https://wa.me/573245640270?text=Hola%20Juan%20Pablo,%20me%20gustaría%20obtener%20más%20información%20sobre%20los%20servicios%20de%20SnakeDev." target="_blank" class="contact-card reveal">
+      <a href="https://wa.me/573245640270?text=Hola%20Juan%20Pablo,%20me%20gustaría%20obtener%20más%20información%20sobre%20los%20servicios%20de%20SnakeDev."
+        target="_blank" class="contact-card reveal">
         <h4>Juan Pablo Urbano</h4>
         <p>+57 324 564 0270</p>
         <span style="font-size: 0.8rem; color: #555;">Click para WhatsApp</span>
       </a>
-      <a href="https://wa.me/573226849465?text=Hola%20Luis%20Fernando,%20me%20gustaría%20obtener%20más%20información%20sobre%20los%20servicios%20de%20SnakeDev." target="_blank" class="contact-card reveal">
+      <a href="https://wa.me/573226849465?text=Hola%20Luis%20Fernando,%20me%20gustaría%20obtener%20más%20información%20sobre%20los%20servicios%20de%20SnakeDev."
+        target="_blank" class="contact-card reveal">
         <h4>Luis Fernando Jiménez</h4>
         <p>+57 322 684 9465</p>
         <span style="font-size: 0.8rem; color: #555;">Click para WhatsApp</span>
       </a>
     </div>
-    
+
     <a href="mailto:juanpabloum25@gmail.com" class="main-email reveal">juanpabloum25@gmail.com</a>
     <a href="mailto:Luisxxx103@gmail.com" class="main-email reveal">Luisxxx103@gmail.com</a>
   </section>
 
   <footer>
-    <p>&copy; 2026 SnakeDev · Colombia</p>
+    <p>&copy; 2026 SnakeDev · Cali-Colombia</p>
   </footer>
 
   <script>
@@ -202,4 +379,5 @@
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
 </body>
+
 </html>
